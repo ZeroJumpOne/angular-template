@@ -1,0 +1,10 @@
+<div *ngIf="!productService.cargando" class="rk-portfolio__items">
+   <a *ngFor="let product of productService.productosFiltrados" routerLink="/item/{{product.cod}}"
+      class="animated fadeIn rk-item ae-masonry__item">
+      <img src="productos/{{ product.url}}.jpg" [alt]="product.url">
+      <div class="item-meta">
+         <h2>{{product.titulo}}</h2>
+         <p>{{product.categoria}}</p>
+      </div>
+   </a>
+</div>

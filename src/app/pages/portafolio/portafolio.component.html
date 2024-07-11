@@ -30,7 +30,8 @@
 
    <div *ngIf="!productosService.cargando" class="rk-portfolio__items">
 
-      <a *ngFor="let product of productosService.productos" routerLink="/item"
+      <a *ngFor="let product of productosService.productos"
+         routerLink="/item/{{product.cod}}"
          class="animated fadeIn rk-item ae-masonry__item">
          <img src="productos/{{ product.url}}.jpg" [alt]="product.url">
          <div class="item-meta">

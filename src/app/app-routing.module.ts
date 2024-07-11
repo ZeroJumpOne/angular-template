@@ -4,6 +4,7 @@ import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { SearchComponent } from './pages/search/search.component';
 
 const routes: Routes = [
    {
@@ -15,12 +16,16 @@ const routes: Routes = [
       component: AboutComponent,
    },
    {
-      path: 'item',
+      path: 'item/:id',
       component: ItemComponent,
    },
    {
       path: 'contact-us',
       component: ContactUsComponent,
+   },
+   {
+      path: 'search/:cual',
+      component: SearchComponent,
    },
    {
       path: '**',
