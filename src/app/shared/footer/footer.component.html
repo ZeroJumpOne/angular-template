@@ -7,35 +7,48 @@
             </li>
             <li class="rk-menu__item"><a href="documentation.html" class="rk-menu__link">Docs</a>
             </li>
-            <li routerLinkActive="active" class="rk-menu__item"><a routerLink="contact-us" class="rk-menu__link">Contact</a>
+            <li routerLinkActive="active" class="rk-menu__item"><a routerLink="contact-us"
+                  class="rk-menu__link">Contact</a>
             </li>
          </ul>
          <p class="rk-footer__text rk-footer__copy ">
             <span class="ae-u-bold">© </span>
-            <span class="ae-u-bolder">{{ year }} Isaac Hdez Castro </span>
+            <span class="ae-u-bolder">{{ year }} {{ infoService.info.nombre_corto }} </span>
             All Right Reserved.
          </p>
       </div>
 
-      <div class="ae-grid__item item-lg-4 au-xs-ta-center"><a href="#0" class="rk-social-btn ">
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center">
+         <a target="_blank" [href]="infoService.info.facebook" class="rk-social-btn ">
             <svg>
-               <use xlink:href="assets/img/symbols.svg#icon-facebook"></use>
-            </svg></a><a href="#0" class="rk-social-btn ">
+               <use xlink:href="img/symbols.svg#icon-facebook"></use>
+            </svg>
+         </a>
+
+         <a target="_blank" [href]="infoService.info.twitter" class="rk-social-btn ">
             <svg>
-               <use xlink:href="assets/img/symbols.svg#icon-twitter"></use>
-            </svg></a><a href="#0" class="rk-social-btn ">
+               <use xlink:href="img/symbols.svg#icon-twitter"></use>
+            </svg>
+         </a>
+
+         <a target="_blank" [href]="infoService.info.instagram" class="rk-social-btn ">
             <svg>
-               <use xlink:href="assets/img/symbols.svg#icon-pinterest"></use>
-            </svg></a><a href="#0" class="rk-social-btn ">
+               <use xlink:href="img/symbols.svg#icon-pinterest"></use>
+            </svg>
+         </a>
+
+         <a href="#0" class="rk-social-btn ">
             <svg>
-               <use xlink:href="assets/img/symbols.svg#icon-tumblr"></use>
-            </svg></a>
+               <use xlink:href="img/symbols.svg#icon-tumblr"></use>
+            </svg>
+         </a>
       </div>
 
       <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
          <p class="rk-footer__text rk-footer__contact ">
             <span class="ae-u-bold">Email: </span>
-            <span class="ae-u-bolder"> <a href="mailto:proyectos@zerojumpone.mx" class="rk-dark-color ">Contact Us</a></span>
+            <span class="ae-u-bolder"> <a href="mailto:{{infoService.info.email}}" class="rk-dark-color ">{{
+                  infoService.info.email }}</a></span>
          </p>
          <p class="rk-footer__text rk-footer__by">
             Theme by <a href="http://pixeden.com" class="ae-u-bolder">Pixeden.</a>
