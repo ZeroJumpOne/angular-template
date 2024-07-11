@@ -9,6 +9,6 @@ import { Info } from '../../interfaces/info.interface';
 })
 export class HeaderComponent {
 
-   constructor(private infoService: InfoPaginaService) {}
+   constructor(public infoService: InfoPaginaService) {}
 
 }
